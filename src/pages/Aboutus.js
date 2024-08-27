@@ -6,7 +6,7 @@ import abhishekImage from '../images/clients/abhishek.jpeg';
 import mayurImage from '../images/clients/mayur.jpeg';
 
 const AboutUs = () => {
-    useDocTitle('MLD | Molad e Konsult - About Us')
+    useDocTitle('NextDev - About Us')
 
     return (
         <>
