@@ -30,7 +30,7 @@ const AboutUs = () => {
                                     <h2 className="text-3xl font-bold text-blue-900">Abhishek Patil</h2>
                                     <h3 className="text-xl font-semibold text-gray-700">Founder & CEO</h3>
                                     <p className="mt-4 text-gray-800 text-lg">
-                                    Abhishek Patil is the Co-Founder and CEO of Next Dev. With 2.5 years of experience at Cognizant, Abhishek brings a wealth of knowledge in technology and a visionary approach to leadership. His commitment to innovation and excellence drives Next Dev's mission to deliver cutting-edge solutions and push the boundaries of what's possible.
+                                    Abhishek Patil is the Co-Founder and CEO of Next Dev. With 5+ years of experience at Cognizant, Abhishek brings a wealth of knowledge in technology and a visionary approach to leadership. His commitment to innovation and excellence drives Next Dev's mission to deliver cutting-edge solutions and push the boundaries of what's possible.
                                     </p>
                                 </div>
                             </div>
