@@ -8,9 +8,8 @@ import logo2 from '../images/clients/logo2.svg';
 const clientImage = {
     height: '10rem',
     width: 'auto',
-    mixBlendMode: 'multiply',
-    objectFit: 'contain', // Ensure the image is properly contained within the div
-}
+    objectFit: 'contain',
+};
 
 const Clients = () => {
     return (
@@ -24,25 +23,25 @@ const Clients = () => {
                     <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">Some of our clients.</h2>
                 </div>
 
-                <div className="p-16" data-aos="fade-in" data-aos-delay="600">
-                    <div className="flex justify-center space-x-4">
-                        <div style={clientImage} className="overflow-hidden flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
+                <div className="overflow-x-auto p-4 scrollbar-hide" data-aos="fade-in" data-aos-delay="600">
+                    <div className="flex space-x-8 min-w-max justify-center">
+                        <div style={clientImage} className="flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
                             <img src={kws} alt="Client Logo 3" />                           
                         </div>
 
-                        <div style={clientImage} className="overflow-hidden flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
+                        <div style={clientImage} className="flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
                             <img src={protergia} alt="Protergia" />                            
                         </div> 
 
-                        <div style={clientImage} className="overflow-hidden flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
+                        <div style={clientImage} className="flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
                             <img src={geps} alt="GEPS" />                            
                         </div>
 
-                        <div style={clientImage} className="overflow-hidden flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
+                        <div style={clientImage} className="flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
                             <img src={logo2} alt="Client Logo 2" />                            
                         </div>
 
-                        <div style={clientImage} className="overflow-hidden flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
+                        <div style={clientImage} className="flex justify-center transition-all ease-in-out opacity-75 hover:opacity-100">
                             <img src={abhi} alt="Abhi" />                            
                         </div>
                     </div>

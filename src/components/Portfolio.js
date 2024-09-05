@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCheckCircle } from 'react-icons/fa';
+import TechnologyStack from './technologystack';
 
 const Portfolio = () => {
     return (
@@ -18,13 +19,13 @@ const Portfolio = () => {
                                 <div className="m-2">
                                     <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">1-Year Plan</h4>
                                     <p className="text-md font-medium leading-5 mb-4">
-                                        <strong>₹1500 INR/month</strong>
+                                        <strong>Basic Support</strong>
                                     </p>
                                     <ul className="list-none">
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Free Web Maintenance</li>
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Free Domain</li>
-                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Free SSL</li>
-                                        <li className="flex items-center"><FaCheckCircle className="text-green-600 mr-2" />Free SEO</li>
+                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />SSL certification</li>
+                                        <li className="flex items-center"><FaCheckCircle className="text-green-600 mr-2" />Basic SEO</li>
                                     </ul>
                                     <div className="flex justify-center my-4">
                                         <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
@@ -39,7 +40,7 @@ const Portfolio = () => {
                                 <div className="m-2">
                                     <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">2-Year Plan</h4>
                                     <p className="text-md font-medium leading-5 mb-4">
-                                        <strong>₹1250 INR/month</strong>
+                                        <strong>Extended Support</strong>
                                     </p>
                                     <ul className="list-none">
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />All Features in 1-Year Plan</li>
@@ -60,7 +61,7 @@ const Portfolio = () => {
                                 <div className="m-2">
                                     <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12 text-red-600">4-Year Plan <span className="bg-yellow-300 p-1 rounded-lg text-sm">Best Offer</span></h4>
                                     <p className="text-md font-medium leading-5 mb-4">
-                                        <strong>₹1000 INR/month</strong>
+                                        <strong>Unlimited Support</strong>
                                     </p>
                                     <ul className="list-none">
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />All Features in 2-Year Plan</li>
@@ -100,6 +101,7 @@ const Portfolio = () => {
                     </div>
                 </div>
             </div>
+            <TechnologyStack />
         </>
     );
 };
