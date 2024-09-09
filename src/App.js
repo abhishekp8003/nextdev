@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
@@ -31,6 +30,14 @@ function App() {
     window.addEventListener('load', () => {
       aos_init();
     });
+
+    // Set a timer to show the popup after 10 seconds
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 5000); // 10 seconds
+
+    // Clean up timer on component unmount
+    return () => clearTimeout(timer);
   }, []);
 
   useDocTitle("NextDev Labs");

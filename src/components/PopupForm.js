@@ -30,7 +30,7 @@ const PopupForm = ({ show, onClose }) => {
         setThankYouMessage(true); // Show thank you message
         setTimeout(() => {
           setThankYouMessage(false); // Hide thank you message after a delay
-          onClose(); // Minimize popup
+          onClose(); // Close the popup after a delay
         }, 3000); // 3-second delay before minimizing the popup
       })
       .catch((error) => {
