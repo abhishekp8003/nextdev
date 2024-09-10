@@ -4,23 +4,57 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Define custom font class in Tailwind's base layer */
+@layer base {
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+/* Base styles */
 body {
-  margin: 0;
-  font-family: 'Lato', sans-serif;
+  @apply m-0 font-lato antialiased;
 }
 
+/* Hero Section Background */
 .hero {
-  background: url(./images/hero-bg.svg) top center no-repeat;
-  background-size: cover;
+  @apply bg-cover bg-top bg-center;
+  background-image: url('./images/hero-bg.svg');
 }
 
+/* Footer Background */
 .footer {
-  background: url(./images/footer.svg) top center no-repeat;
-  background-size: cover;
+  @apply bg-cover bg-top bg-center;
+  background-image: url('./images/footer.svg');
 }
 
+/* Call to Action (CTA) Background */
 .cta {
-  background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg) fixed center center;
+  @apply bg-fixed bg-center bg-cover;
+  background-image: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg');
 }
 
+/* Mobile-first Responsive Adjustments */
+@media (min-width: 640px) {
+  .cta {
+    @apply p-8;
+  }
+}
 
+@media (min-width: 768px) {
+  .cta {
+    @apply p-12;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta {
+    @apply p-16;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cta {
+    @apply p-20;
+  }
+}
