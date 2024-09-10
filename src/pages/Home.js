@@ -8,23 +8,31 @@ import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
 // import AboutUs from './Aboutus';
 
-
 const Home = () => {
-    return (
-        <>
-            <Hero />
-            <Intro />
-            <Services />
-            <Portfolio />
-            <Clients />
-            {/* <AboutUs /> */}
-
-            <Cta/>
-            <Footer />
-        </>
-
-    )
+  return (
+    <>
+      {/* Hero Section */}
+      <Hero />
+      
+      {/* Introduction Section */}
+      <Intro />
+      
+      {/* Services Section */}
+      <Services />
+      
+      {/* Portfolio Section */}
+      <Portfolio />
+      
+      {/* Clients Section */}
+      <Clients />
+      
+      {/* Call to Action Section */}
+      <Cta />
+      
+      {/* Footer Section */}
+      <Footer />
+    </>
+  );
 }
 
 export default Home;
-

@@ -9,6 +9,12 @@
   .font-lato {
     font-family: 'Lato', sans-serif;
   }
+  .text-responsive {
+    @apply text-sm md:text-base lg:text-lg xl:text-xl;
+  }
+  .padding-responsive {
+    @apply p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12;
+  }
 }
 
 /* Base styles */
@@ -18,20 +24,27 @@ body {
 
 /* Hero Section Background */
 .hero {
-  @apply bg-cover bg-top bg-center;
+  @apply bg-cover bg-top bg-center md:bg-center lg:bg-center;
   background-image: url('./images/hero-bg.svg');
+  background-size: cover;
 }
 
 /* Footer Background */
 .footer {
-  @apply bg-cover bg-top bg-center;
+  @apply bg-cover bg-top bg-center md:bg-center lg:bg-center;
   background-image: url('./images/footer.svg');
+  background-size: cover;
 }
 
 /* Call to Action (CTA) Background */
 .cta {
-  @apply bg-fixed bg-center bg-cover;
+  @apply bg-fixed bg-center bg-cover p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12;
   background-image: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg');
+}
+
+/* Popup Form Enhancements */
+.popup-form {
+  @apply max-w-full w-11/12 md:w-3/4 lg:w-1/2 p-4 m-auto top-1/2 transform -translate-y-1/2 bg-white rounded-lg shadow-md;
 }
 
 /* Mobile-first Responsive Adjustments */
@@ -57,4 +70,9 @@ body {
   .cta {
     @apply p-20;
   }
+}
+
+/* Button Styling */
+.button {
+  @apply px-4 py-2 text-sm font-semibold bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors duration-300;
 }
