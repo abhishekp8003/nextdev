@@ -65,7 +65,7 @@ function MainContent() {
           href="https://wa.me/919172826126"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-2 right-2 md:bottom-4 md:right-4 lg:bottom-6 lg:right-6 z-50" // Ensure z-index is high enough
+          className="fixed bottom-2 right-2 md:bottom-4 md:right-4 lg:bottom-6 lg:right-6 z-50"
         >
           <img
             src={whatsappLogo}
