@@ -62,20 +62,21 @@ function MainContent() {
   return (
     <>
       {/* WhatsApp logo link only on the Home screen */}
-          {location.pathname === '/' && (
-            <a
-              href="https://wa.me/919028348003" // WhatsApp link with your number
-              target="_blank"
-              rel="noopener noreferrer"
-              className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50"
-            >
-              <img
-                src={whatsappLogo}
-                alt="WhatsApp"
-                className="w-12 h-12 rounded-full shadow-lg hover:opacity-80 transition-transform duration-300 transform hover:scale-110"
-              />
-            </a>
-          )}
+{location.pathname === '/' && (
+  <a
+    href="https://wa.me/919172826126" // WhatsApp link with your number
+    target="_blank"
+    rel="noopener noreferrer"
+    className="fixed bottom-2 right-2 md:bottom-4 md:right-4 lg:bottom-6 lg:right-6 z-50"
+  >
+    <img
+      src={whatsappLogo}
+      alt="WhatsApp"
+      className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg hover:opacity-80 transition-transform duration-300 transform hover:scale-110"
+    />
+  </a>
+)}
+
 
       
       {location.pathname === '/' && <PopupForm show={showPopup} onClose={handleClosePopup} />}
