@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import './PopupForm.css'; // Import custom CSS file
 
 const PopupForm = ({ show, onClose }) => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,7 @@ const PopupForm = ({ show, onClose }) => {
     message: '',
   });
 
-  const [thankYouMessage, setThankYouMessage] = useState(false); // New state for the thank you message
+  const [thankYouMessage, setThankYouMessage] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -27,15 +28,14 @@ const PopupForm = ({ show, onClose }) => {
       )
       .then((response) => {
         console.log('Email sent successfully:', response.status, response.text);
-        setThankYouMessage(true); // Show thank you message
+        setThankYouMessage(true);
         setTimeout(() => {
-          setThankYouMessage(false); // Hide thank you message after a delay
-          onClose(); // Close the popup after a delay
-        }, 3000); // 3-second delay before minimizing the popup
+          setThankYouMessage(false);
+          onClose();
+        }, 3000);
       })
       .catch((error) => {
         console.error('Failed to send email:', error);
-        // Handle error (e.g., show an error message)
       });
   };
 
@@ -50,12 +50,11 @@ const PopupForm = ({ show, onClose }) => {
         >
           &times;
         </button>
-        <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-        {thankYouMessage ? ( // Conditionally render the thank you message
+        <h1 className="font-extrabold text-4xl text-blue-900 mb-6 animate-heading">NextDev Labs</h1>
+        {thankYouMessage ? (
           <p className="text-center text-green-500 mb-4">Thank you for your response!</p>
         ) : (
           <form onSubmit={handleSubmit}>
-            {/* Form fields */}
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Name:
@@ -110,7 +109,7 @@ const PopupForm = ({ show, onClose }) => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none"
+              className="w-full bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none animate-submit"
             >
               Send Message
             </button>

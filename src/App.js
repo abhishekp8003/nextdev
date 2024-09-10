@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import './index.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 // All pages
 import Home from './pages/Home';
@@ -15,8 +15,21 @@ import { useDocTitle } from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 import PopupForm from './components/PopupForm'; // Import Popup Form
 
+import whatsappLogo from './images/clients/whatsapp.png'; // Import WhatsApp logo image
+
 function App() {
-  const [showPopup, setShowPopup] = useState(false); // State to manage popup visibility
+  return (
+    <Router>
+      <ScrollToTop>
+        <MainContent />
+      </ScrollToTop>
+    </Router>
+  );
+}
+
+function MainContent() {
+  const [showPopup, setShowPopup] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const aos_init = () => {
@@ -25,26 +38,22 @@ function App() {
         duration: 1000,
         easing: 'ease-out-cubic',
       });
-    }
+    };
 
     window.addEventListener('load', () => {
       aos_init();
     });
 
-    // Set a timer to show the popup after 10 seconds
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 5000); // 10 seconds
+    if (location.pathname === '/') {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+      }, 5000);
 
-    // Clean up timer on component unmount
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
 
   useDocTitle("NextDev Labs");
-
-  const handleOpenPopup = () => {
-    setShowPopup(true); // Open popup
-  };
 
   const handleClosePopup = () => {
     setShowPopup(false); // Close popup
@@ -52,26 +61,30 @@ function App() {
 
   return (
     <>
-      <Router>
-        <ScrollToTop>
-          <button
-            className="fixed bottom-8 right-8 bg-blue-900 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-400 transition"
-            onClick={handleOpenPopup}
-          >
-            Contact Us
-          </button>
-          
-          {/* Popup Form */}
-          <PopupForm show={showPopup} onClose={handleClosePopup} />
+      {/* WhatsApp logo link only on the Home screen */}
+      {location.pathname === '/' && (
+        <a
+          href="https://wa.me/919028348003" // WhatsApp link with your number
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-8 right-8"
+        >
+          <img
+            src={whatsappLogo}
+            alt="WhatsApp"
+            className="w-12 h-12 rounded-full shadow-lg hover:opacity-80 transition"
+          />
+        </a>
+      )}
+      
+      {location.pathname === '/' && <PopupForm show={showPopup} onClose={handleClosePopup} />}
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/get-demo" element={<DemoProduct />} />
-            <Route path="/about-us" element={<AboutUs />} />
-          </Routes>
-        </ScrollToTop>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/get-demo" element={<DemoProduct />} />
+        <Route path="/about-us" element={<AboutUs />} />
+      </Routes>
     </>
   );
 }
