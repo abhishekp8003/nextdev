@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 // All pages
 import Home from './pages/Home';
@@ -59,6 +60,31 @@ function MainContent() {
 
   return (
     <>
+      <Helmet>
+        {/* Default Meta Tags */}
+        <title>NextDev Labs - Expert Website & Application Development Services</title>
+        <meta name="description" content="NextDev offers expert website and application development services. We specialize in building fast, responsive, and SEO-friendly websites and apps for businesses looking to enhance their online presence." />
+        <meta name="keywords" content="Nextdev, Nextdev Labs, Nextdev solutions, website development, application development, web design, app design, SEO, responsive websites, digital solutions, web development, app development, UI/UX design" />
+        <meta name="author" content="Nextdev Labs" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph Meta Tags for social media */}
+        <meta property="og:title" content="Nextdev - Expert Website & Application Development" />
+        <meta property="og:description" content="Nextdev provides professional website and application development services. Our solutions are fast, responsive, and SEO-friendly, tailored to enhance your online presence." />
+        <meta property="og:url" content="https://nextdev.co.in" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="%PUBLIC_URL%/images/nextdev.jpeg" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nextdev - Website & Application Development" />
+        <meta name="twitter:description" content="Nextdev specializes in fast, responsive, and SEO-friendly website and application development. Discover how we can help you enhance your online presence." />
+        <meta name="twitter:image" content="%PUBLIC_URL%/images/nextdev.jpeg" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://nextdev.co.in" />
+      </Helmet>
+
       {/* WhatsApp logo link only on the Home screen */}
       {location.pathname === '/' && (
         <a

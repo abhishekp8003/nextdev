@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#000000" />
+  <title>Nextdev - Expert Website & Application Development Services</title>
+
+  <!-- Favicon -->
   <link rel="icon" href="%PUBLIC_URL%/nextdev.jpeg" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/nextdev.jpeg" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="Nextdev offers expert website and application development services. We specialize in building fast, responsive, and SEO-friendly websites and apps for businesses looking to enhance their online presence." />
@@ -12,7 +18,7 @@
   <meta name="author" content="Nextdev Labs" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph Meta Tags for better social media integration -->
+  <!-- Open Graph Meta Tags for Social Media -->
   <meta property="og:title" content="Nextdev - Expert Website & Application Development" />
   <meta property="og:description" content="Nextdev provides professional website and application development services. Our solutions are fast, responsive, and SEO-friendly, tailored to enhance your online presence." />
   <meta property="og:url" content="https://nextdev.co.in" />
@@ -28,35 +34,28 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://nextdev.co.in" />
 
-  <!-- Favicon and Manifest -->
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/nextdev.jpeg" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-  <!-- Page Title -->
-  <title>Nextdev - Expert Website & Application Development Services</title>
-</head>
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1191082225494328');
-  fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq) return; n=f.fbq=function() {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+      n.queue=[]; t=b.createElement(e); t.async=!0;
+      t.src=v; s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1191082225494328');
+    fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1191082225494328&ev=PageView&noscript=1"
-  /></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1191082225494328&ev=PageView&noscript=1"
+    />
+  </noscript>
 
-  <!-- Google Tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-78K104ZM6S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -64,5 +63,16 @@
     gtag('js', new Date());
     gtag('config', 'G-78K104ZM6S');
   </script>
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+
+</head>
+<body>
+  <!-- JavaScript Fallback -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <!-- Root Element for React -->
+  <div id="root"></div>
 </body>
 </html>
