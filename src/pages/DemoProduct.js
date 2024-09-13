@@ -39,8 +39,35 @@ const DemoProduct = () => {
     const clearErrors = () => setErrors({});
     const clearInput = () => setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '', demoProducts: [] });
 
+    const validateForm = () => {
+        const newErrors = {};
+
+// Validation for first name
+if (!formData.firstName) newErrors.firstName = 'Please enter your first name.';
+
+// Validation for last name
+if (!formData.lastName) newErrors.lastName = 'Please provide your last name.';
+
+// Validation for email with format check
+if (!formData.email) newErrors.email = 'Your email is required.';
+else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Please enter a valid email address.';
+
+// Validation for phone number with length and format check
+if (!formData.phone) newErrors.phone = 'A 10-digit phone number is required.';
+else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Please enter a valid 10-digit phone number.';
+
+// Validation for selecting at least one plan
+if (formData.demoProducts.length === 0) newErrors.demoProducts = 'Select at least one plan to proceed.';
+
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
+        if (!validateForm()) return;
+
         setLoading(true);
 
         const templateParams = {
@@ -95,7 +122,7 @@ const DemoProduct = () => {
                                 </h1>
                             </div>
 
-                            {['1_year_plan', '2_year_plan', '4_year_plan'].map((plan, index) => (
+                            {['1-Year Plan', '2-Year Plan', '4-Year Plan'].map((plan, index) => (
                                 <div key={plan} className="flex items-center my-4">
                                     <input
                                         id={`checkbox-${index + 1}`}
@@ -106,7 +133,7 @@ const DemoProduct = () => {
                                         onChange={handleChange}
                                     />
                                     <label htmlFor={`checkbox-${index + 1}`} className="ml-3 text-lg font-medium text-gray-900">
-                                        {`${index + 1} Year Plan`}
+                                        {plan}
                                     </label>
                                 </div>
                             ))}
