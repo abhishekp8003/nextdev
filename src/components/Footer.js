@@ -150,6 +150,8 @@ const Footer = () => {
                     {/* Bottom area */}
                     <div className="md:flex md:items-center md:justify-between py-4 md:py-8 border-t border-gray-200 text-center md:text-left">
                         {/* Copyrights note */}
+
+
                         <div className="text-sm text-[#013289] mr-4">&copy; 2024 NextDev Labs. All rights reserved.</div>
                         
 
