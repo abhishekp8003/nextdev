@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
+import FAQ from '../components/FAQ';
 // import AboutUs from './Aboutus';
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
       
       {/* Call to Action Section */}
       <Cta />
+      <FAQ />
       
       {/* Footer Section */}
       <Footer />

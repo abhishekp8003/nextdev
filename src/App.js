@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import DemoProduct from './pages/DemoProduct';
 import AboutUs from './pages/Aboutus';
+import FAQ from './components/FAQ';
 
 // Components
 import { useDocTitle } from './components/CustomHook';
@@ -108,6 +109,7 @@ function MainContent() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/get-demo" element={<DemoProduct />} />
+        <Route path="/FAQ" element={<FAQ />} />
         <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </>
