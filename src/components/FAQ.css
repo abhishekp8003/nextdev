@@ -4,7 +4,7 @@
   border-radius: 10px;
   background-color: #f1f5f9;
   max-width: 100%;
-  overflow-x: auto; /* Enable horizontal scrolling for the FAQ container */
+  overflow-x: hidden; /* Hidden initially */
 }
 
 .faq-title {
@@ -15,19 +15,25 @@
   color: #1e3a8a;
 }
 
-/* Limit visible items to 5 vertically, rest should be scrollable horizontally */
+/* FAQ items are displayed in slides with 5 questions vertically */
 .faq-items {
   display: flex;
-  flex-wrap: wrap;
-  max-height: 500px; /* Adjust the height to fit 5 items */
   overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Disable vertical scrolling */
-  scroll-snap-type: x mandatory; /* Snap effect for smooth scrolling */
+  scroll-snap-type: x mandatory; /* Smooth snap scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  max-width: 100%; /* Ensure it fits within the container */
+}
+
+.faq-slide {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 100%; /* Each slide takes full width */
+  max-width: 100%; /* Ensure slides stay within container */
 }
 
 .faq-item {
-  display: inline-block;
-  width: 100%; /* Full width for vertical view */
+  width: 100%;
   margin: 10px 0;
   padding: 15px;
   cursor: pointer;
@@ -35,14 +41,9 @@
   border-radius: 8px;
   background-color: #ffffff;
   transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.faq-item.visible {
-  display: block;
-}
-
-.faq-item.hidden {
-  display: none;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words if necessary */
+  white-space: normal; /* Allow the text to wrap to a new line */
 }
 
 .faq-item:hover {
@@ -54,6 +55,8 @@
   font-size: 18px;
   font-weight: bold;
   color: #1e3a8a;
+  word-wrap: break-word; /* Break long words if necessary */
+  white-space: normal; /* Allow the text to wrap */
 }
 
 .faq-answer {
@@ -62,6 +65,8 @@
   padding-left: 10px;
   color: #475569;
   border-left: 3px solid #1e3a8a;
+  word-wrap: break-word; /* Ensure text wraps properly */
+  white-space: normal; /* Allow the text to wrap to the next line */
 }
 
 .faq-question.active {
@@ -69,7 +74,7 @@
   border-left: 4px solid #2563eb;
 }
 
-/* Horizontal Scrollbar */
+/* Scrollbar styling */
 .faq-items::-webkit-scrollbar {
   height: 8px;
 }
@@ -85,19 +90,63 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .faq-container {
+    padding: 10px;  /* Reduced padding for mobile */
+    margin: 10px;   /* Reduced margin for smaller screens */
+    overflow-x: hidden;  /* Ensure no horizontal overflow */
+  }
+
+  .faq-title {
+    font-size: 18px;  /* Smaller font size for mobile */
+    margin-bottom: 15px;
+  }
+
   .faq-items {
-    display: block;
-    max-height: 100%; /* Adjust for smaller screens */
-    overflow-x: auto;
-    white-space: normal;
+    display: flex;
+    flex-direction: row; /* Horizontal scrolling on mobile */
+    overflow-x: auto;    /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth snap scroll for mobile */
+    max-width: 100%;
+  }
+
+  .faq-slide {
+    display: inline-block;
+    width: 100%; /* Each slide takes full width */
+    max-width: 100%; /* Prevent slides from overflowing */
+    flex-shrink: 0; /* Keep full width for each slide */
   }
 
   .faq-item {
-    width: 100%;
+    width: 100%; /* Full width for FAQ items */
+    margin: 10px 0;
+    word-wrap: break-word; /* Ensure text breaks to a new line */
+    white-space: normal;   /* Wrap long text within the container */
   }
-}
 
-/* Ensure first 5 FAQs are visible without scrolling */
-.visible {
-  display: block;
+  .faq-question {
+    font-size: 16px;  /* Slightly smaller text for mobile readability */
+    font-weight: bold;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+    color: #475569;
+    padding-left: 5px;
+    border-left: 2px solid #1e3a8a;
+    word-wrap: break-word;  /* Prevent text overflow */
+    white-space: normal;    /* Ensure text wraps to the next line */
+  }
+
+  /* Horizontal Scrollbar */
+  .faq-items::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .faq-items::-webkit-scrollbar-thumb {
+    background-color: #2563eb;
+    border-radius: 6px;
+  }
 }
