@@ -74,16 +74,56 @@ function MainContent() {
         <meta property="og:description" content="Nextdev provides professional website and application development services. Our solutions are fast, responsive, and SEO-friendly, tailored to enhance your online presence." />
         <meta property="og:url" content="https://nextdev.co.in" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="%PUBLIC_URL%/images/nextdev.jpeg" />
+        <meta property="og:image" content="%PUBLIC_URL%/images/nextdev.ico" />
 
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Nextdev - Website & Application Development" />
         <meta name="twitter:description" content="Nextdev specializes in fast, responsive, and SEO-friendly website and application development. Discover how we can help you enhance your online presence." />
-        <meta name="twitter:image" content="%PUBLIC_URL%/images/nextdev.jpeg" />
+        <meta name="twitter:image" content="%PUBLIC_URL%/images/nextdev.ico" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://nextdev.co.in" />
+
+        {/* Breadcrumb Schema for SEO */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://nextdev.co.in/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact Us",
+                "item": "https://nextdev.co.in/contact"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "FAQ",
+                "item": "https://nextdev.co.in/FAQ"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "About Us",
+                "item": "https://nextdev.co.in/about-us"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Demo Product",
+                "item": "https://nextdev.co.in/get-demo"
+              }
+            ]
+          }`}
+        </script>
       </Helmet>
 
       {/* WhatsApp logo link only on the Home screen */}
