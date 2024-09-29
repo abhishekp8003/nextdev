@@ -1,3 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login/
+Disallow: /user-settings/
+
+Allow: /
+
+Sitemap: https://nextdev.co.in/sitemap.xml
