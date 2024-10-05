@@ -6,7 +6,9 @@ import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
+// import blog from '../pages/blog';
 import FAQ from '../components/FAQ';
+import Blog from '../pages/blog';
 // import AboutUs from './Aboutus';
 
 const Home = () => {
@@ -23,7 +25,7 @@ const Home = () => {
       
       {/* Portfolio Section */}
       <Portfolio />
-      
+      <Blog />
       {/* Clients Section */}
       <Clients />
       

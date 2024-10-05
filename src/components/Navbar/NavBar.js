@@ -44,8 +44,8 @@ const NavBar = () => {
                             {
                                 "@type": "ListItem",
                                 "position": 3,
-                                "name": "Services",
-                                "item": "https://nextdev.co.in/#services"
+                                "name": "Blog",
+                                "item": "https://nextdev.co.in/blog"
                             },
                             {
                                 "@type": "ListItem",

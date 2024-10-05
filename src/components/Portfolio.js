@@ -19,7 +19,7 @@ const Portfolio = () => {
                                 <div className="m-2">
                                     <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">1-Year Plan</h4>
                                     <p className="text-md font-medium leading-5 mb-4">
-                                        <strong>Basic Support</strong>
+                                        <strong>₹1199</strong> / month
                                     </p>
                                     <ul className="list-none">
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Free Web Maintenance</li>
@@ -40,7 +40,7 @@ const Portfolio = () => {
                                 <div className="m-2">
                                     <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">2-Year Plan</h4>
                                     <p className="text-md font-medium leading-5 mb-4">
-                                        <strong>Extended Support</strong>
+                                        <strong>₹799</strong> / month
                                     </p>
                                     <ul className="list-none">
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />All Features in 1-Year Plan</li>
@@ -61,13 +61,14 @@ const Portfolio = () => {
                                 <div className="m-2">
                                     <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12 text-red-600">4-Year Plan <span className="bg-yellow-300 p-1 rounded-lg text-sm">Best Offer</span></h4>
                                     <p className="text-md font-medium leading-5 mb-4">
-                                        <strong>Unlimited Support</strong>
+                                        <strong>₹599</strong> / month
                                     </p>
                                     <ul className="list-none">
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />All Features in 2-Year Plan</li>
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Unlimited Support</li>
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Custom Development</li>
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Exclusive Updates</li>
+                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Free Marketing to Boost Website Traffic</li>
                                         <li className="flex items-center"><FaCheckCircle className="text-red-600 mr-2 font-bold" />Limited Time Offer!</li>
                                     </ul>
                                     <div className="flex justify-center my-4">
@@ -84,9 +85,10 @@ const Portfolio = () => {
                                     <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">Why Choose Us?</h4>
                                     <ul className="list-none">
                                         <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />We use cutting-edge technologies</li>
-                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />React.js, Node.js, and JavaScript frameworks</li>
-                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Custom, scalable solutions</li>
-                                        <li className="flex items-center"><FaCheckCircle className="text-red-600 mr-2 font-bold" />No WordPress or Plugin-based sites</li>
+                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />free Marketing for 4 year Plan</li>
+                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />get your website in 7 days</li>
+                                        <li className="flex items-center mb-2"><FaCheckCircle className="text-green-600 mr-2" />Exclusive Offers Only Available Here in India</li>
+                                        <li className="flex items-center"><FaCheckCircle className="text-green-600 mr-2" />Scalable, secure, and efficient websites</li>
                                     </ul>
                                     <div className="flex justify-center my-4">
                                         <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
@@ -96,14 +98,14 @@ const Portfolio = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+
+                    <TechnologyStack />
                 </div>
             </div>
-            <TechnologyStack />
         </>
     );
-};
+}
 
 export default Portfolio;

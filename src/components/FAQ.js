@@ -5,22 +5,18 @@ const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState({}); // Track active index per slide
 
   const faqs = [
-    { question: "What services does NextDev offer in MERN development?", answer: "NextDev offers full-stack MERN development, including website and web application development using MongoDB, Express.js, React.js, and Node.js." },
-    { question: "How much does MERN development cost globally?", answer: "Our MERN development services start from $30 per hour for global clients, and we currently offer a 30% discount for new projects." },
-    { question: "What pricing plans do you offer for MERN development?", answer: "We offer flexible pricing plans, starting from $1000 per project. With a 30% discount, the cost reduces to $700 for new clients." },
-    { question: "Do you provide custom MERN solutions?", answer: "Yes, we provide fully customizable MERN solutions based on the specific requirements of the client." },
-    { question: "Can I track the progress of my MERN project?", answer: "Yes, we provide regular updates, and you can track the progress of your project using our project dashboard." },
-    { question: "What technologies are included in the MERN stack?", answer: "The MERN stack includes MongoDB for the database, Express.js for the back-end framework, React.js for the front-end, and Node.js for the runtime environment." },
-    { question: "How long does it take to develop a MERN application?", answer: "The development time varies based on the complexity of the project, but on average, it takes around 4-6 weeks to develop a full-featured MERN application." },
-    { question: "Do you offer post-launch support for MERN applications?", answer: "Yes, we offer comprehensive post-launch support and maintenance for all MERN applications developed by NextDev." },
-    { question: "Can I get a Progressive Web App (PWA) with MERN?", answer: "Yes, we specialize in developing PWAs using the MERN stack to deliver high-performance, offline-first web applications." },
-    { question: "Is it possible to integrate third-party APIs in MERN applications?", answer: "Yes, we can integrate various third-party APIs into your MERN application, including payment gateways, social logins, and more." },
-    { question: "What is the typical maintenance cost for a MERN application?", answer: "Maintenance costs vary depending on the complexity of the application. Typically, it ranges from $200 to $500 per month, with flexible plans available." },
-    { question: "How scalable is a MERN stack application?", answer: "The MERN stack is highly scalable, allowing us to build applications that can handle increasing workloads with ease." },
-    { question: "Do you offer cloud hosting for MERN applications?", answer: "Yes, we provide cloud hosting services using AWS, Google Cloud, or Azure, depending on your requirements." },
-    { question: "What kind of database security do you provide for MongoDB?", answer: "We ensure MongoDB is secure by applying SSL/TLS encryption, using firewalls, and implementing proper authentication and authorization mechanisms." },
-    { question: "Do you provide data migration services for existing projects to MERN stack?", answer: "Yes, we offer data migration services to migrate your existing project from another stack to the MERN stack." },
-    { question: "Can you optimize an existing MERN stack project?", answer: "Yes, we can analyze and optimize your existing MERN stack project for better performance and scalability." }
+    { question: "What technology stacks do you use?", answer: "We offer development services using MERN stack, MEAN stack, and WordPress, tailored to the specific needs of your business." },
+    { question: "What is the typical timeline to develop a project?", answer: "We can deliver projects in as little as 7 days, depending on complexity and scope." },
+    { question: "Can you help me decide which stack is right for my project?", answer: "Yes, we assess your business requirements and recommend the best technology stack, whether it's MERN, MEAN, or WordPress." },
+    { question: "Do you provide end-to-end solutions?", answer: "Yes, we handle everything from design to development, deployment, and ongoing maintenance." },
+    { question: "How do you ensure fast project delivery?", answer: "Our agile approach, experienced team, and efficient processes allow us to deliver high-quality projects within short timelines." },
+    { question: "Can you integrate third-party services?", answer: "Yes, we specialize in integrating APIs, payment gateways, and third-party services to enhance your application." },
+    { question: "Do you offer post-launch support?", answer: "Absolutely, we offer full post-launch support, including maintenance and upgrades." },
+    { question: "Is SEO included in web development services?", answer: "Yes, we include SEO optimization as part of our web development services to ensure better search engine visibility." },
+    { question: "What are your pricing plans?", answer: "Our pricing starts at as low as 599 inr  for new clients with flexible options, depending on project requirements and stack choices." },
+    { question: "How do you ensure project security?", answer: "We follow best practices for securing your application, including using SSL, firewalls, and data encryption." },
+    { question: "Can you optimize an existing WordPress or MERN project?", answer: "Yes, we can optimize existing projects for performance, security, and scalability." },
+    { question: "Do you offer cloud hosting solutions?", answer: "Yes, we provide hosting solutions on AWS, Google Cloud, and other platforms as per your requirements." },
   ];
 
   const chunkSize = 5; // Number of FAQs per slide

@@ -27,8 +27,8 @@ const NavLinks = () => {
                             {
                                 "@type": "ListItem",
                                 "position": 3,
-                                "name": "Services",
-                                "item": "https://nextdev.co.in/#services"
+                                "name": "Blog",
+                                "item": "https://nextdev.co.in/blog"
                             },
                             {
                                 "@type": "ListItem",
@@ -55,8 +55,8 @@ const NavLinks = () => {
                 About
             </Link>
 
-            <Link className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/#services">
-                Services
+            <Link className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/blog">
+                Blog
             </Link>
 
             <Link className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/contact">
