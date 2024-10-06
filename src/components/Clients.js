@@ -15,40 +15,40 @@ const testimonials = [
     {
         name: 'Ravi Kumar',
         review: 'Next Dev created an outstanding website for us!',
-        company: 'Tech Innovators',
+        company: 'Innovative Tech Solutions',
     },
     {
         name: 'Sneha Patel',
         review: 'Amazing services, highly recommend!',
-        company: 'Patel Solutions',
+        company: 'SmartBiz Solutions',
     },
     {
         name: 'Anil Verma',
         review: 'Next Dev transformed our online presence!',
-        company: 'Verma Enterprises',
+        company: 'Global Enterprises',
     },
     {
         name: 'Priya Singh',
         review: 'Professional and efficient, will work with them again.',
-        company: 'FutureTech',
+        company: 'Future Innovations',
     },
     {
         name: 'Karan Desai',
         review: 'Great experience working with Next Dev!',
-        company: 'Desai Industries',
+        company: 'TechHub Industries',
     },
     {
         name: 'Vikram Joshi',
         review: 'Highly satisfied with the web solution provided.',
-        company: 'Joshi Technologies',
+        company: 'Visionary Technologies',
     },
     {
         name: 'Naina Gupta',
         review: 'They delivered exactly what we needed!',
-        company: 'Gupta Enterprises',
+        company: 'Elite Solutions',
     },
 ];
-
+    
 const Clients = () => {
     return (
         <div className="mt-8 bg-gray-100">
