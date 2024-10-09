@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for routing
 import img from '../images/web.svg'; 
 import img2 from '../images/app.svg';
-import img3 from '../images/hosting.svg';
+import img3 from '../images/hosting.svg';  // Update image for desktop app
 import img4 from '../images/consultation.svg';
 
 const Services = () => {
@@ -22,7 +23,7 @@ const Services = () => {
                 <div className="px-12" data-aos="fade-down" data-aos-delay="600">
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         
-                        <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                        <Link to="/Staticweb" className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img alt="Static Web Development" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img} />
                                 <h2 className="font-semibold my-4 text-2xl text-center">Static Web Development</h2>
@@ -30,9 +31,9 @@ const Services = () => {
                                     We craft static websites that are lightweight and fast-loading, ideal for showcasing your content with a straightforward design. Perfect for portfolios, landing pages, and small business sites.
                                 </p>
                             </div>
-                        </div>
+                        </Link>
 
-                        <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                        <Link to="/Dynamicweb" className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img alt="Dynamic Web Development" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img2} />
                                 <h2 className="font-semibold my-4 text-2xl text-center">Dynamic Web Development</h2>
@@ -40,19 +41,19 @@ const Services = () => {
                                     Our dynamic web development services create interactive and engaging websites that offer real-time updates and user-driven content. Ideal for e-commerce sites, social networks, and complex applications.
                                 </p>
                             </div>
-                        </div>
+                        </Link>
 
-                        <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                        <Link to="/Desktopapp" className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
-                                <img alt="Domain and Hosting Services" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
-                                <h2 className="font-semibold my-4 text-2xl text-center">Domain and Hosting Services</h2>
+                                <img alt="Desktop Application Development" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img3} />
+                                <h2 className="font-semibold my-4 text-2xl text-center">Desktop Application Development</h2>
                                 <p className="text-md font-medium">
-                                    We offer reliable domain registration and hosting solutions to ensure your website is accessible and secure. Our hosting services provide the stability and performance needed to support your online presence.
+                                    We develop high-performance desktop applications that are tailored to meet your business needs. Whether for Windows, macOS, or Linux, our desktop apps offer robust, secure, and scalable solutions to enhance your workflows and improve efficiency.
                                 </p>
                             </div>
-                        </div>
+                        </Link>
 
-                        <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
+                        <Link to="/itsolution" className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
                             <div className="m-2 text-justify text-sm">
                                 <img alt="General IT Consultations" className="rounded-t group-hover:scale-[1.15] transition duration-1000 ease-in-out" src={img4} />
                                 <h2 className="font-semibold my-4 text-2xl text-center">General IT Consultations</h2>
@@ -60,7 +61,7 @@ const Services = () => {
                                     Our IT consultation services offer expert advice on optimizing your technology solutions. Whether you need help with system integration, technology strategy, or troubleshooting, we provide valuable insights to enhance your IT operations.
                                 </p>
                             </div>
-                        </div>                    
+                        </Link>                    
                     </div>
                 </div>
             </section>

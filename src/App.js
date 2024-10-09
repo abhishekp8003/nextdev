@@ -12,13 +12,19 @@ import DemoProduct from './pages/DemoProduct';
 import AboutUs from './pages/Aboutus';
 import FAQ from './components/FAQ';
 import Blog from './pages/blog';
-
+import TermsOfService from './components/Tos';
+import RefundPolicy from './components/RefundPolicy';
+import CancellationPolicy from './components/Cancellation';
 // Components
 import { useDocTitle } from './components/CustomHook';
 import ScrollToTop from './components/ScrollToTop';
 import PopupForm from './components/PopupForm'; 
 
 import whatsappLogo from './images/clients/whatsapp.png'; 
+import StaticWebDevelopment from './components/Swd';
+import DynamicWebDevelopment from './components/Dwd';
+import DesktopApplicationDevelopment from './components/Dwa';
+import GeneralITConsultations from './components/gi';
 
 function App() {
   return (
@@ -137,6 +143,15 @@ function MainContent() {
   <Route path="/FAQ" element={<FAQ />} />
   <Route path="/about-us" element={<AboutUs />} />
   <Route path="/blog" element={<Blog />} /> {/* Add Blog route */}
+  <Route path="/refund-policy" element={<RefundPolicy />} />
+  <Route path="/cancellation-policy" element={<CancellationPolicy />} />
+  <Route path="/terms-of-services" element={<TermsOfService />} />
+  <Route path="/Staticweb" element={<StaticWebDevelopment />} />
+  <Route path="/Dynamicweb" element={<DynamicWebDevelopment />} />
+  <Route path="/Desktopapp" element={<DesktopApplicationDevelopment />} />
+  <Route path="/itsolution" element={<GeneralITConsultations />} />
+  
+  
 </Routes>
 
     </>
