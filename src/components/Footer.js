@@ -116,7 +116,7 @@ const Footer = () => {
               <a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer">
                 <img className="w-32" src={trustpilotLogo} alt="Trustpilot" /> {/* Fixed size */}
               </a>
-              <a href="https://www.google.com/maps/reviews" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.google.com/search?client=ubuntu-sn&channel=fs&q=nextdev+lab" target="_blank" rel="noopener noreferrer">
                 <img className="w-32" src={googleReviewLogo} alt="Google Review" /> {/* Fixed size */}
               </a>
             </div>

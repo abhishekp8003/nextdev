@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './PopupForm.css'; // Import custom CSS file
+import logo from '../images/nextdev.png'; // Adjust path as needed
 
 const PopupForm = ({ show, onClose }) => {
   const [formData, setFormData] = useState({
@@ -50,7 +51,9 @@ const PopupForm = ({ show, onClose }) => {
         >
           &times;
         </button>
-        <h1 className="font-extrabold text-4xl text-blue-900 mb-6 animate-heading">NextDev Labs</h1>
+        <div className="flex justify-center mb-6">
+          <img src={logo} alt="NextDev Labs Logo" className="h-16 w-auto" /> {/* Added logo */}
+        </div>
         {thankYouMessage ? (
           <p className="text-center text-green-500 mb-4">Thank you for your response!</p>
         ) : (

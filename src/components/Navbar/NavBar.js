@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import NavLinks from '../Navbar/NavLinks';
 import { HashLink } from 'react-router-hash-link';
 import { Helmet } from 'react-helmet';
+import logo from '../../images/nextdev.png'; // Adjust path as needed
 
 const NavBar = () => {
     const [top, setTop] = useState(!window.scrollY);
@@ -68,7 +69,12 @@ const NavBar = () => {
                 <nav className="flex flex-row justify-between items-center py-2">
                     <div className="flex flex-row justify-center md:px-12 md:mx-12 items-center text-center font-semibold">
                         <HashLink smooth to="/#hero" aria-label="Go to hero section">
-                            <h1 className="font-extrabold text-4xl text-blue-900">NextDev</h1>
+                            <img 
+                                src={logo} 
+                                alt="NextDev Logo" 
+                                className="h-12 w-auto sm:h-16 md:h-20" 
+                                // Applied classes for responsive sizes: 12 for mobile, 16 for small screens, 20 for medium screens and above
+                            />
                         </HashLink>
                     </div>
                     <div className="flex items-center">
