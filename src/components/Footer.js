@@ -53,9 +53,9 @@ const Footer = () => {
               <h3 className="font-bold text-4xl mb-4">NextDev</h3>
               <div className='text-md font-medium text-gray-600'>
                 <h5>NextDev Labs</h5>
-                <p>Hindjewadi phase 1,</p>
-                <p>Pune 411057,</p>
-                <p>Maharastra, India</p>
+                <p>Lane Number 4</p>
+                <p>near Vaidehi Enclave, Bavdhan,</p>
+                <p>Pune, Maharashtra 411021</p>
                 <p>info@nextdev.co.in</p>
               </div>
             </div>
@@ -113,7 +113,7 @@ const Footer = () => {
 
             {/* Trustpilot and Google Review Logos */}
             <div className="flex justify-center items-center mt-1 space-x-5"> {/* Reduced space between logos */}
-              <a href="https://www.trustpilot.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.trustpilot.com/review/nextdev.co.in" target="_blank" rel="noopener noreferrer">
                 <img className="w-32" src={trustpilotLogo} alt="Trustpilot" /> {/* Fixed size */}
               </a>
               <a href="https://www.google.com/search?client=ubuntu-sn&channel=fs&q=nextdev+lab" target="_blank" rel="noopener noreferrer">
