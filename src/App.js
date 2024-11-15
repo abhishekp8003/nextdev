@@ -21,7 +21,7 @@ import ScrollToTop from './components/ScrollToTop';
 import PopupForm from './components/PopupForm'; 
 
 import whatsappLogo from './images/clients/whatsapp.png'; 
-import contactLogo from './images/pngwing.com (Copy).png';
+import contactLogo from './images/contactus.png';
 import StaticWebDevelopment from './components/Swd';
 import DynamicWebDevelopment from './components/Dwd';
 import DesktopApplicationDevelopment from './components/Dwa';
@@ -134,18 +134,18 @@ function MainContent() {
           </a>
 
           {/* Contact Us logo link */}
-          <a
-            href="https://wa.me/919172826126"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed bottom-2 left-2 md:bottom-4 md:left-4 lg:bottom-6 lg:left-6 z-50"
-          >
-            <img
-              src={contactLogo}
-              alt="Contact Us"
-              className="w-10 h-10 md:w-10 md:h-10 rounded-full shadow-lg hover:opacity-80 transition-transform duration-300 transform hover:scale-110"
-            />
-          </a>
+         {/* Contact Us logo link */}
+<a
+  href="tel:+919172826126" // Directs to a phone call using the specified number
+  className="fixed bottom-2 left-2 md:bottom-4 md:left-4 lg:bottom-6 lg:left-6 z-50"
+>
+  <img
+    src={contactLogo}
+    alt="Contact Us"
+    className="w-30 h-10 md:w-30 md:h-10 rounded-full shadow-lg hover:opacity-80 transition-transform duration-300 transform hover:scale-110"
+  />
+</a>
+
         </>
       )}
 
