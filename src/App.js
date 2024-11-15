@@ -138,12 +138,12 @@ function MainContent() {
             href="https://wa.me/919172826126"
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-16 right-2 md:bottom-20 md:right-4 lg:bottom-24 lg:right-6 z-50"
+            className="fixed bottom-2 left-2 md:bottom-4 md:left-4 lg:bottom-6 lg:left-6 z-50"
           >
             <img
               src={contactLogo}
               alt="Contact Us"
-              className="w-10 h-10 md:w-11 md:h-11 rounded-full shadow-lg hover:opacity-80 transition-transform duration-300 transform hover:scale-110"
+              className="w-10 h-10 md:w-10 md:h-10 rounded-full shadow-lg hover:opacity-80 transition-transform duration-300 transform hover:scale-110"
             />
           </a>
         </>
